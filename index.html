@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marco Gil | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="brand">
+        <div class="brand__dot"></div>
+        <span class="brand__name">Marco Gil</span>
+      </div>
+
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" id="btnES" type="button">ES</button>
+        <button class="btn btn--ghost" id="btnEN" type="button">EN</button>
+
+        <div class="cv">
+          <a class="btn" id="cvES" href="assets/cv-es.pdf" download>Descargar CV (ES)</a>
+          <a class="btn btn--ghost" id="cvEN" href="assets/cv-en.pdf" download>Download CV (EN)</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <img class="avatar" src="assets/perfil.jpg" alt="Foto de perfil de Marco Gil"/>
+        <div class="hero__text">
+          <h1 id="t_title">Desarrollador Web Junior | Data & IA</h1>
+          <p class="hero__subtitle" id="t_subtitle">HTML • CSS • JavaScript • C/C++ • Estructuras de Datos • Power BI</p>
+
+          <p class="hero__lead" id="t_lead">
+            Soy estudiante de Informática y construyo proyectos pequeños pero muy útiles para demostrar habilidades reales:
+            interfaces limpias, lógica clara y buen orden del código. Te invito a ver mis repositorios (con vista previa),
+            porque ahí está mi trabajo.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#projects" id="t_cta_projects">Ver Proyectos</a>
+            <a class="btn btn--ghost" href="#certs" id="t_cta_certs">Ver Certificados</a>
+          </div>
+
+          <div class="chips">
+            <span class="chip" id="t_chip_1">Inglés B1 (certificado)</span>
+            <span class="chip" id="t_chip_2">Office + Power BI</span>
+            <span class="chip" id="t_chip_3">C / C++ + Algoritmos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <h2 class="section__title" id="t_about_title">Perfil</h2>
+        <div class="card">
+          <p id="t_about_text">
+            Estudiante de Informática con base en C y C++, Estructuras de Datos y Algoritmos.
+            Desarrollo proyectos web (HTML, CSS, JavaScript) y también trabajo con análisis de datos (Excel/Power BI).
+            Busco oportunidades remotas o junior donde pueda aportar, aprender rápido y entregar resultados.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title" id="t_projects_title">Proyectos (GitHub)</h2>
+          <p class="section__subtitle" id="t_projects_subtitle">
+            Vista previa + descripción. Cada proyecto incluye el enlace directo al repositorio.
+          </p>
+        </div>
+
+        <div id="githubProjects" class="grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="certs">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title" id="t_certs_title">Certificaciones</h2>
+          <p class="section__subtitle" id="t_certs_subtitle">Haz clic para ver en grande.</p>
+        </div>
+
+        <div id="certGrid" class="grid grid--cert"></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <h2 class="section__title" id="t_contact_title">Contacto</h2>
+        <div class="card contact">
+          <a class="contact__item" href="mailto:gllpz2699@gmail.com">gllpz2699@gmail.com</a>
+          <a class="contact__item" href="https://wa.me/584123596711" target="_blank" rel="noreferrer">WhatsApp: +58 412 359 6711</a>
+          <a class="contact__item" href="https://github.com/gytajengbre" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="contact__item" href="https://www.linkedin.com/in/marco-antonio-gil-lopez-5943521b2" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="contact__item" href="https://www.instagram.com/gllpzmarco?igsh=MWJ0eHd6dWZ1MWQ0eg==" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__content" role="dialog" aria-modal="true">
+      <button class="modal__close" id="modalClose" aria-label="Cerrar">✕</button>
+      <img id="modalImg" alt="Vista previa" />
+      <div class="modal__meta">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <a id="modalLink" class="btn" target="_blank" rel="noreferrer">Abrir</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">© 2026 Marco Gil</div>
+  </footer>
+</body>
+</html>
